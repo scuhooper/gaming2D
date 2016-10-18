@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 97afaf0569edf4086babe169b4e01ebe
+timeCreated: 1476818344
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: random girl_0
+    21300002: random girl_1
+    21300004: random girl_2
+    21300006: random girl_3
+    21300008: random girl_4
+    21300010: random girl_5
+    21300012: random girl_6
+    21300014: random girl_7
+    21300016: random girl_8
+    21300018: random girl_9
+    21300020: random girl_10
+    21300022: random girl_11
+    21300024: random girl_12
+    21300026: random girl_13
+    21300028: random girl_14
+    21300030: random girl_15
+    21300032: random girl_16
+    21300034: random girl_17
+    21300036: random girl_18
+    21300038: random girl_19
+    21300040: random girl_20
+    21300042: random girl_21
+    21300044: random girl_22
+    21300046: random girl_23
+    21300048: random girl_24
+    21300050: random girl_25
+    21300052: random girl_26
+    21300054: random girl_27
+    21300056: random girl_28
+    21300058: random girl_29
+    21300060: random girl_30
+    21300062: random girl_31
+    21300064: random girl_32
+    21300066: random girl_33
+    21300068: random girl_34
+    21300070: random girl_35
+    21300072: random girl_36
+    21300074: random girl_37
+    21300076: random girl_38
+    21300078: random girl_39
+    21300080: random girl_40
+    21300082: random girl_41
+    21300084: random girl_42
+    21300086: random girl_43
+    21300088: random girl_44
+    21300090: random girl_45
+    21300092: random girl_46
+    21300094: random girl_47
+    21300096: random girl_48
+    21300098: random girl_49
+    21300100: random girl_50
+    21300102: random girl_51
+    21300104: random girl_52
+    21300106: random girl_53
+    21300108: random girl_54
+    21300110: random girl_55
+    21300112: random girl_56
+    21300114: random girl_57
+    21300116: random girl_58
+    21300118: random girl_59
+    21300120: random girl_60
+    21300122: random girl_61
+    21300124: random girl_62
+    21300126: random girl_63
+    21300128: random girl_64
+    21300130: random girl_65
+    21300132: random girl_66
+    21300134: random girl_67
+    21300136: random girl_68
+    21300138: random girl_69
+    21300140: random girl_70
+    21300142: random girl_71
+    21300144: random girl_72
+    21300146: random girl_73
+    21300148: random girl_74
+    21300150: random girl_75
+    21300152: random girl_76
+    21300154: random girl_77
+    21300156: random girl_78
+    21300158: random girl_79
+    21300160: random girl_80
+    21300162: random girl_81
+    21300164: random girl_82
+    21300166: random girl_83
+    21300168: random girl_84
+    21300170: random girl_85
+    21300172: random girl_86
+    21300174: random girl_87
+    21300176: random girl_88
+    21300178: random girl_89
+    21300180: random girl_90
+    21300182: random girl_91
+    21300184: random girl_92
+    21300186: random girl_93
+    21300188: random girl_94
+    21300190: random girl_95
+    21300192: random girl_96
+    21300194: random girl_97
+    21300196: random girl_98
+    21300198: random girl_99
+    21300200: random girl_100
+    21300202: random girl_101
+    21300204: random girl_102
+    21300206: random girl_103
+    21300208: random girl_104
+    21300210: random girl_105
+    21300212: random girl_106
+    21300214: random girl_107
+    21300216: random girl_108
+    21300218: random girl_109
+    21300220: random girl_110
+    21300222: random girl_111
+    21300224: random girl_112
+    21300226: random girl_113
+    21300228: random girl_114
+    21300230: random girl_115
+    21300232: random girl_116
+    21300234: random girl_117
+    21300236: random girl_118
+    21300238: random girl_119
+    21300240: random girl_120
+    21300242: random girl_121
+    21300244: random girl_122
+    21300246: random girl_123
+    21300248: random girl_124
+    21300250: random girl_125
+    21300252: random girl_126
+    21300254: random girl_127
+    21300256: random girl_128
+    21300258: random girl_129
+    21300260: random girl_130
+    21300262: random girl_131
+    21300264: random girl_132
+    21300266: random girl_133
+    21300268: random girl_134
+    21300270: random girl_135
+    21300272: random girl_136
+    21300274: random girl_137
+    21300276: random girl_138
+    21300278: random girl_139
+    21300280: random girl_140
+    21300282: random girl_141
+    21300284: random girl_142
+    21300286: random girl_143
+    21300288: random girl_144
+    21300290: random girl_145
+    21300292: random girl_146
+    21300294: random girl_147
+    21300296: random girl_148
+    21300298: random girl_149
+    21300300: random girl_150
+    21300302: random girl_151
+    21300304: random girl_152
+    21300306: random girl_153
+    21300308: random girl_154
+    21300310: random girl_155
+    21300312: random girl_156
+    21300314: random girl_157
+    21300316: random girl_158
+    21300318: random girl_159
+    21300320: random girl_160
+    21300322: random girl_161
+    21300324: random girl_162
+    21300326: random girl_163
+    21300328: random girl_164
+    21300330: random girl_165
+    21300332: random girl_166
+    21300334: random girl_167
+    21300336: random girl_168
+    21300338: random girl_169
+    21300340: random girl_170
+    21300342: random girl_171
+    21300344: random girl_172
+    21300346: random girl_173
+    21300348: random girl_174
+    21300350: random girl_175
+    21300352: random girl_176
+    21300354: random girl_177
+    21300356: random girl_178
+    21300358: random girl_179
+    21300360: random girl_180
+    21300362: random girl_181
+    21300364: random girl_182
+    21300366: random girl_183
+    21300368: random girl_184
+    21300370: random girl_185
+    21300372: random girl_186
+    21300374: random girl_187
+    21300376: random girl_188
+    21300378: random girl_189
+    21300380: random girl_190
+    21300382: random girl_191
+    21300384: random girl_192
+    21300386: random girl_193
+    21300388: random girl_194
+    21300390: random girl_195
+    21300392: random girl_196
+    21300394: random girl_197
+    21300396: random girl_198
+    21300398: random girl_199
+    21300400: random girl_200
+    21300402: random girl_201
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: random girl_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1409
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
