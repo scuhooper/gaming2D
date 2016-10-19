@@ -1,8 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/animator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player.js">
     <Files>
-      <File FileName="Assets/Scripts/Player.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/animator.cs" Line="14" Column="12" />
+      <File FileName="Assets/Player.js" Line="1" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
