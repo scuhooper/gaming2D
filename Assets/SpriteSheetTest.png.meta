@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 909d50dca899d4dc28b6c73eacf8b876
+timeCreated: 1476903620
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SpriteSheetTest_0
+    21300002: SpriteSheetTest_1
+    21300004: SpriteSheetTest_2
+    21300006: SpriteSheetTest_3
+    21300008: SpriteSheetTest_4
+    21300010: SpriteSheetTest_5
+    21300012: SpriteSheetTest_6
+    21300014: SpriteSheetTest_7
+    21300016: SpriteSheetTest_8
+    21300018: SpriteSheetTest_9
+    21300020: SpriteSheetTest_10
+    21300022: SpriteSheetTest_11
+    21300024: SpriteSheetTest_12
+    21300026: SpriteSheetTest_13
+    21300028: SpriteSheetTest_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheetTest_0
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 116
+        width: 357
+        height: 843
+      alignment: 9
+      pivot: {x: 0.5, y: 0.035797175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 104
+        width: 376
+        height: 833
+      alignment: 9
+      pivot: {x: 0.45921415, y: 0.03312879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_2
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 128
+        width: 398
+        height: 832
+      alignment: 9
+      pivot: {x: 0.54799026, y: 0.028142618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 107
+        width: 407
+        height: 846
+      alignment: 9
+      pivot: {x: 0.59028167, y: 0.031018782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_4
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 97
+        width: 430
+        height: 846
+      alignment: 9
+      pivot: {x: 0.56869644, y: 0.03745396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_5
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 94
+        width: 430
+        height: 846
+      alignment: 9
+      pivot: {x: 0.56811357, y: 0.03102956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_6
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 112
+        width: 425
+        height: 836
+      alignment: 9
+      pivot: {x: 0.5264523, y: 0.017394373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_7
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 120
+        width: 452
+        height: 831
+      alignment: 9
+      pivot: {x: 0.5148094, y: 0.031910397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_8
+      rect:
+        serializedVersion: 2
+        x: 4009
+        y: 109
+        width: 455
+        height: 847
+      alignment: 9
+      pivot: {x: 0.5614966, y: 0.041637633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_9
+      rect:
+        serializedVersion: 2
+        x: 4538
+        y: 120
+        width: 445
+        height: 831
+      alignment: 9
+      pivot: {x: 0.5864576, y: 0.032812346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_10
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 120
+        width: 425
+        height: 836
+      alignment: 9
+      pivot: {x: 0.5411489, y: 0.023055373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_11
+      rect:
+        serializedVersion: 2
+        x: 5589
+        y: 104
+        width: 434
+        height: 849
+      alignment: 9
+      pivot: {x: 0.55641335, y: 0.026238738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_12
+      rect:
+        serializedVersion: 2
+        x: 6125
+        y: 123
+        width: 414
+        height: 839
+      alignment: 9
+      pivot: {x: 0.5422422, y: 0.02476074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_13
+      rect:
+        serializedVersion: 2
+        x: 6613
+        y: 101
+        width: 373
+        height: 839
+      alignment: 9
+      pivot: {x: 0.50937814, y: 0.033098277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheetTest_14
+      rect:
+        serializedVersion: 2
+        x: 7074
+        y: 101
+        width: 361
+        height: 839
+      alignment: 9
+      pivot: {x: 0.50968856, y: 0.0289295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
