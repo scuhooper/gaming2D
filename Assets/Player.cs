@@ -6,8 +6,9 @@ public class Player : MonoBehaviour
 
 	public float speed = 10.0F;
 	public bool isWalking;
-
-	public float Speed = 0f;
+	public GameObject hitBox;
+	public GameObject lefthitBox;
+	public int Speed = 0;
 	private float movex = 0f;
 	private float movey = 0f;
 	private Animator animator;
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator>();
+		hitBox.SetActive(false);
+		lefthitBox.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -32,5 +35,21 @@ public class Player : MonoBehaviour
 		}
 		else
 			animator.SetBool("isWalking", false);
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			hitBox.SetActive(true);
+			Debug.Log("PIE");
+		}
+		else {
+			hitBox.SetActive(false);
+		}
+		if (movex <= -0.1f)
+		{
+			transform.rotation = Quaternion.Euler(0, 180, 0);
+		}
+		else {
+			transform.rotation = Quaternion.Euler(0, 0, 0);
+		}
 	}
 }
