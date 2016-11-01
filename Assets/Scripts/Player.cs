@@ -69,4 +69,6 @@ public class Player : MonoBehaviour
 			transform.rotation = Quaternion.Euler(0, 0, 0);
 		}
 	}
+
+
 }
