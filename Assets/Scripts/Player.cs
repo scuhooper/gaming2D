@@ -7,10 +7,11 @@ public class Player : MonoBehaviour
 	public float speed = 10.0F;
 	//public bool isWalking;
 	public GameObject hitBox;
-	public int Speed = 0;
+	public float Speed = 1f;
 	private float movex = 0f;
 	private float movey = 0f;
 	private Animator animator;
+	public double run = 1.5;
 
 	// Use this for initialization
 	void Start()
@@ -27,6 +28,13 @@ public class Player : MonoBehaviour
 		movey = Input.GetAxis("Vertical");
 		GetComponent<Rigidbody2D>().velocity = new Vector2(movex * Speed, movey * Speed);
 
+		if (Input.GetKey("left shift"))
+		{
+			GetComponent<Rigidbody2D>().velocity = new Vector2(movex * Speed * 2, movey * Speed * 2);
+		}
+		else {
+			GetComponent<Rigidbody2D>().velocity = new Vector2(movex * Speed, movey * Speed);
+		}
 
 		if ((movex >= 0.1f) || (movex <= -0.1f) || (movey <= -0.1f))
 		{
