@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
 	private Animator animator;
 	public double run = 1.5;
 
+	// variables used for combat and damage. These are accessed in some of the drug scripts.
+	// Questions, ask James
+	public float armor;
+	public int damage;
+
 	// Use this for initialization
 	void Start()
 	{
