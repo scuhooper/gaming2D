@@ -12,17 +12,30 @@ public class Teleport : MonoBehaviour {
 	public float maxTeleportDistance;
 
 	LineRenderer line;  // linerenderer component
-	Vector3 mousePos;	// used for the coordinate to represent the mouse pointer on the screen
+	Vector3 mousePos;   // used for the coordinate to represent the mouse pointer on the screen
+	GameObject playerProjection;	// projection of where to teleport to
 
 	// Use this for initialization
 	void Start () {
 		line = GetComponent<LineRenderer>();
 		line.useWorldSpace = true;	// make renderer use world space coordinates
-		line.SetWidth( .05f, .05f );	// width of line !!!BEWARE!!! small values still produce rather large lines
+		line.SetWidth( .05f, .05f );    // width of line !!!BEWARE!!! small values still produce rather large lines
+
+		playerProjection = transform.GetChild( 1 ).gameObject;   // get reference to projection object
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		DrawLine();
+		if ( Input.GetKeyDown( KeyCode.Space ) )
+		{
+			GetComponentInParent<Transform>().position = playerProjection.transform.position;
+		}
+	}
+
+
+	void DrawLine()
+	{
 		// Get line vector for teleport direction ray
 		GetLineVector();
 		// set up line properties
@@ -30,7 +43,6 @@ public class Teleport : MonoBehaviour {
 		// set projected Barry image to end of line
 		ShowProjectedImage();
 	}
-
 	/// <summary>
 	/// Gets the world coordinates of the mouse pointer
 	/// </summary>
@@ -90,7 +102,6 @@ public class Teleport : MonoBehaviour {
 	void ShowProjectedImage()
 	{
 		// set projected Barry image to end of line
-		GameObject playerProjection = transform.GetChild( 0 ).gameObject;   // get reference to projection object
 		playerProjection.SetActive( true ); // enable the object
 		playerProjection.transform.position = new Vector3( transform.position.x + mousePos.x, transform.position.y + mousePos.y, -1f ); // set object to be centered at mouse location
 	}
