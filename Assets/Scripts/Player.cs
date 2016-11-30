@@ -75,11 +75,13 @@ public class Player : MonoBehaviour
 		//flips the player left and right
 		if (movex <= -0.1f)
 		{
-			transform.rotation = Quaternion.Euler(0, 180, 0);
+			// transform.rotation = Quaternion.Euler(0, 180, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
+			GetComponent<SpriteRenderer>().flipX = true;
 		}
 		if (movex >= 0.1f)
 		{
-			transform.rotation = Quaternion.Euler(0, 0, 0);
+			// transform.rotation = Quaternion.Euler(0, 0, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
+			GetComponent<SpriteRenderer>().flipX = false;
 		}
 	}
 
