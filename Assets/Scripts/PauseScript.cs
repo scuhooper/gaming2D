@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*********
+ *		Author:Cameron Asbury 
+ *		Purpose:Force Camera into a selected aspect ratio, so no matter what screen resolution a player picks on screen artifacts all remain the same. 
+ ********/
+using UnityEngine;
 using System.Collections;
 
 public class PauseScript : MonoBehaviour {
@@ -27,7 +31,7 @@ public class PauseScript : MonoBehaviour {
             pauseCanvas.enabled = true;
             
             player.GetComponent<Player>().enabled = false;
-            //player.active = false;
+            player.GetComponent<Teleport>().enabled = false;
             Time.timeScale = 0;
         }
         else
@@ -35,6 +39,7 @@ public class PauseScript : MonoBehaviour {
 
             pauseCanvas.enabled = false;
 
+            player.GetComponent<Teleport>().enabled = true;
             player.GetComponent<Player>().enabled = true;
             Time.timeScale = 1;
         }

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*********
+ *		Author:Cameron Asbury 
+ *		Purpose:Force Camera into a selected aspect ratio, so no matter what screen resolution a player picks on screen artifacts all remain the same. 
+ ********/
+using UnityEngine;
 using System.Collections;
 
 public class DamageFlash : MonoBehaviour {
