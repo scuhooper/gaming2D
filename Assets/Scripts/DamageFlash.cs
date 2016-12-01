@@ -7,21 +7,23 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class DamageFlash : MonoBehaviour {
-
-    public float flashSpeed;
+    GameObject player;
+    public float flashSpeed = 5f;
     public Image flashImage;
-    public Color flashColor;
+    public Color flashColor = new Color(1f, 1f, 1f, 0.1f);
     PlayerHP playerHP;
 
 	// Use this for initialization
 	void Start () {
-        playerHP = playerHP.GetComponent<PlayerHP>();
+        player = GameObject.Find("player");
+        playerHP = player.GetComponent<PlayerHP>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    if (playerHP.bDamage)
         {
+            Debug.Log("INSIDE IF STATEMENT");
                 flashImage.color = flashColor;
                 playerHP.bDamage = false;
         }
