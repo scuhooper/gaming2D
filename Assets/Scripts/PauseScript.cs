@@ -1,6 +1,6 @@
 ﻿/*********
  *		Author:Cameron Asbury 
- *		Purpose:Force Camera into a selected aspect ratio, so no matter what screen resolution a player picks on screen artifacts all remain the same. 
+ *		Purpose:Pauses the game, as well shows a menu of options.
  ********/
 using UnityEngine;
 using System.Collections;
