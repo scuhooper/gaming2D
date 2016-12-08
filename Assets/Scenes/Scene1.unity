@@ -1153,6 +1153,12 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: ed16365880a6d4b92ba209d3932bb1cb, type: 2}
+    - target: {fileID: 212000012823849678, guid: e316c8041e82340f39e0250f75252b06,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300054, guid: 835f52f3749184f84933b9ae15c75ba1,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114000013057051154, guid: e316c8041e82340f39e0250f75252b06, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e316c8041e82340f39e0250f75252b06, type: 2}
@@ -2406,6 +2412,12 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: ed16365880a6d4b92ba209d3932bb1cb, type: 2}
+    - target: {fileID: 212000012823849678, guid: e316c8041e82340f39e0250f75252b06,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300054, guid: 835f52f3749184f84933b9ae15c75ba1,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114000013057051154, guid: e316c8041e82340f39e0250f75252b06, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e316c8041e82340f39e0250f75252b06, type: 2}
