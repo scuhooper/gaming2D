@@ -7,13 +7,15 @@ using System.Collections;
 
 public class PauseScript : MonoBehaviour {
 
-    GameObject player;
+    GameObject player1;
+    GameObject player2;
     public Canvas pauseCanvas;
     bool isPaused;
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
+        player1 = GameObject.Find("player1");
+        player2 = GameObject.Find("player2");
         pauseCanvas.enabled = false;
         isPaused = false;
 	}
@@ -30,8 +32,10 @@ public class PauseScript : MonoBehaviour {
 
             pauseCanvas.enabled = true;
             
-            player.GetComponent<Player>().enabled = false;
-            player.GetComponent<Teleport>().enabled = false;
+            player1.GetComponent<LeftPlayer>().enabled = false;
+            player1.GetComponent<Teleport>().enabled = false;
+            player2.GetComponent<RightPlayer>().enabled = false;
+            player2.GetComponent<Teleport>().enabled = false;
             Time.timeScale = 0;
         }
         else
@@ -39,8 +43,10 @@ public class PauseScript : MonoBehaviour {
 
             pauseCanvas.enabled = false;
 
-            player.GetComponent<Teleport>().enabled = true;
-            player.GetComponent<Player>().enabled = true;
+            player1.GetComponent<Teleport>().enabled = true;
+            player1.GetComponent<LeftPlayer>().enabled = true;
+            player2.GetComponent<RightPlayer>().enabled = true;
+            player2.GetComponent<Teleport>().enabled = true;
             Time.timeScale = 1;
         }
     }

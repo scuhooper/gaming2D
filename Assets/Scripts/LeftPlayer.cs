@@ -8,8 +8,8 @@ public class LeftPlayer : MonoBehaviour
 	//public bool isWalking;
 	public GameObject hitBox;
 	public float Speed = 1f;
-	private float movex = 0f;
-	private float movey = 0f;
+	//private float movex = 0f;
+	//private float movey = 0f;
 	private Animator animator;
 	public double run = 1.5;
 
@@ -41,37 +41,37 @@ public class LeftPlayer : MonoBehaviour
 		if (Input.GetKey(KeyCode.S))
 		{
 			transform.position += Vector3.down * Speed * Time.deltaTime;
-			animator.SetBool("walkUp", true);
+			//animator.SetBool("walkUp", true);
 		}
 		else {
-			animator.SetBool("walkUp", false);
+			//animator.SetBool("walkUp", false);
 		}
 		if (Input.GetKey(KeyCode.A))
 		{
 			transform.position += Vector3.left * Speed * Time.deltaTime;
-			animator.SetBool("walkDown", true);
+			//animator.SetBool("walkDown", true);
 		}
 		else {
-			animator.SetBool("walkDown", false);
+			//animator.SetBool("walkDown", false);
 		}
 		if (Input.GetKey(KeyCode.D))
 		{
 			transform.position += Vector3.right * Speed * Time.deltaTime;
-			animator.SetBool("walkDown", true);
+			//animator.SetBool("walkDown", true);
 		}
 		else {
-			animator.SetBool("walkDown", false);
+			//animator.SetBool("walkDown", false);
 		}
 
 		//Attack
-		if (Input.GetKey(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			hitBox.SetActive(true);
 		}
 		else {
 			hitBox.SetActive(false);
 		}
-
+/*
 		//flips the player left and right
 		if (movex <= -0.1f)
 		{
@@ -83,7 +83,15 @@ public class LeftPlayer : MonoBehaviour
 			// transform.rotation = Quaternion.Euler(0, 0, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
 			GetComponent<SpriteRenderer>().flipX = false;
 		}
-	}
 
+*/
+	}
+public void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.tag=="ball")
+		{
+			col.transform.parent = transform;
+		}
+	}
 
 }

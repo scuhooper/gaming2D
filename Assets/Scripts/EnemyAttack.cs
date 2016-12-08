@@ -7,14 +7,18 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 
-    GameObject player;
+    GameObject player1;
+    GameObject player2;
     public int attack;
-    PlayerHP playerHP;
+    PlayerHP player1HP;
+    PlayerHP player2HP;
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
-        playerHP = player.GetComponent<PlayerHP>();
+        player1 = GameObject.Find("player1");
+        player2 = GameObject.Find("player2");
+        player1HP = player1.GetComponent<PlayerHP>();
+        player2HP = player2.GetComponent<PlayerHP>();
 	}
 	
 	// Update is called once per frame
@@ -26,7 +30,8 @@ public class EnemyAttack : MonoBehaviour {
     {
         if (col.gameObject.tag == "player")
         {
-            playerHP.takeDamage(attack);
+            player1HP.takeDamage(attack);
+            player2HP.takeDamage(attack);
         }
     }
 }

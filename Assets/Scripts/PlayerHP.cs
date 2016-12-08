@@ -18,7 +18,7 @@ public class PlayerHP : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        player = GameObject.Find("player");
+        player = GameObject.Find("player1");
         bDead = false;
         cHealth = sHealth;
 	}
