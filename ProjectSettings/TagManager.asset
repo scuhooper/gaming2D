@@ -8,6 +8,8 @@ TagManager:
   - pickup
   - enemy
   - ball
+  - LeftGoal
+  - RightGoal
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - pickup
   - enemy
   - hitbox
-  - 
+  - ball
   - 
   - 
   - 

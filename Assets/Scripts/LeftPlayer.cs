@@ -41,26 +41,27 @@ public class LeftPlayer : MonoBehaviour
 		if (Input.GetKey(KeyCode.S))
 		{
 			transform.position += Vector3.down * Speed * Time.deltaTime;
-			//animator.SetBool("walkUp", true);
+			animator.SetBool("isWalking", true);
 		}
 		else {
-			//animator.SetBool("walkUp", false);
+			animator.SetBool("isWalking", false);
 		}
 		if (Input.GetKey(KeyCode.A))
 		{
 			transform.position += Vector3.left * Speed * Time.deltaTime;
-			//animator.SetBool("walkDown", true);
+			animator.SetBool("isWalking", true);
 		}
 		else {
-			//animator.SetBool("walkDown", false);
+			animator.SetBool("isWalking", false);
 		}
 		if (Input.GetKey(KeyCode.D))
 		{
 			transform.position += Vector3.right * Speed * Time.deltaTime;
-			//animator.SetBool("walkDown", true);
+			animator.SetBool("isWalking", true);
+			//GetComponent<Transform>().rotation = ;
 		}
 		else {
-			//animator.SetBool("walkDown", false);
+			animator.SetBool("isWalking", false);
 		}
 
 		//Attack
