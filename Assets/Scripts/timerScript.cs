@@ -9,8 +9,9 @@ public class timerScript : MonoBehaviour
 
 	void Update()
 	{
+
 		time += Time.deltaTime;
-		var minutes = time / 60;
+		var minutes = time / 120;
 		var seconds = time % 60;
 		timerLabel.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 	}

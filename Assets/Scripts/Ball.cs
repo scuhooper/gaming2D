@@ -41,7 +41,7 @@ public class Ball : MonoBehaviour
 			God gameScript = NewMethod();
 			gameScript.AddScoreRight(pointValue);
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
-			lerpedColor = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
+			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
 
 		}
