@@ -44,6 +44,22 @@ public class God : MonoBehaviour
 		rightScore.text = "" + rightNum;
 
 	}
+
+	public void OnFire()
+	{
+		if (rightNum >= 5)
+		{
+			Ball gameScript = NewMethod();
+			Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
+
+		}
+		if (leftNum >= 5)
+		{
+			Ball gameScript = NewMethod();
+			Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
+		}
+	}
+
 	public void OnTriggerEnter2D(Collider2D Ball)
 	{
 		if (Ball.gameObject.tag == "LeftGoal")
@@ -61,6 +77,10 @@ public class God : MonoBehaviour
 			Instantiate(Ball, BallSpawner.position, BallSpawner.rotation);
 		}
 
+	}
+	private static Ball NewMethod()
+	{
+		return FindObjectOfType<Ball>();
 	}
 
 

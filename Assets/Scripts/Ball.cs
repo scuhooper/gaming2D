@@ -8,14 +8,16 @@ public class Ball : MonoBehaviour
 	public int pointValue = 1;
 	public GameObject BallSprite;
 	public Transform BallSpawner;
-	//public GameObject pointConnection;
-	// Use this for initialization
+
+	public Color lerpedColor;
+
+
 	void Start()
 	{
-		//pointConnection = GetComponent<God>();
+
 	}
 
-	// Update is called once per frame
+
 	void Update()
 	{
 
@@ -30,6 +32,7 @@ public class Ball : MonoBehaviour
 			God gameScript = NewMethod();
 			gameScript.AddScoreLeft(pointValue);
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
+			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
 
 		}
@@ -38,6 +41,7 @@ public class Ball : MonoBehaviour
 			God gameScript = NewMethod();
 			gameScript.AddScoreRight(pointValue);
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
+			lerpedColor = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
 
 		}
