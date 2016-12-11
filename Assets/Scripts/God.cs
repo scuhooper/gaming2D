@@ -27,21 +27,21 @@ public class God : MonoBehaviour
 	void Update()
 	{
 
-		rightScore.text = "Score: " + rightNum;
-		leftScore.text = "Score: " + leftNum;
+		rightScore.text = "" + rightNum;
+		leftScore.text = "" + leftNum;
 
 	}
 
 	public void AddScoreLeft(int points)
 	{
 		leftNum++;
-		leftScore.text = "Score: " + leftNum;
+		leftScore.text = "" + leftNum;
 
 	}
 	public void AddScoreRight(int points)
 	{
 		rightNum++;
-		rightScore.text = "Score: " + rightNum;
+		rightScore.text = "" + rightNum;
 
 	}
 	public void OnTriggerEnter2D(Collider2D Ball)

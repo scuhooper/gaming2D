@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 81c715372d47f4531abfba7cdfb7f123
+timeCreated: 1481429801
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LCD2
+  fontNames:
+  - LCD2
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11648c53bcf824d91a337a3078be8624, type: 3}
+  - {fileID: 12800000, guid: 7119c0062c22141628be55b2fa85be49, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

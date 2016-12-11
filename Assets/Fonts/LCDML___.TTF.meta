@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: ba7a567eb082e4a779825258eaff3a37
+timeCreated: 1481429826
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LCDMono
+  fontNames:
+  - LCDMono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a46a2f1be91ff46a8a6b5c6a89d9a277, type: 3}
+  - {fileID: 12800000, guid: 7bd2752d34cf84588bf38f3c37d2f2c0, type: 3}
+  - {fileID: 12800000, guid: 330e909dff7994c0aacd351a637b8763, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
