@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &5248842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5248841}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: -11.74, z: 0}
+  m_LocalPosition: {x: 6.36, y: -11.74, z: 0}
   m_LocalScale: {x: 0.028, y: 0.028, z: 0.02372616}
   m_Children: []
   m_Father: {fileID: 0}
@@ -995,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &505779005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1089,7 +1089,7 @@ Transform:
   m_PrefabInternal: {fileID: 1938134731}
   m_GameObject: {fileID: 505779004}
   m_LocalRotation: {x: -0, y: -0, z: 0.25283882, w: 0.96750844}
-  m_LocalPosition: {x: 2.61, y: -11.79, z: 0}
+  m_LocalPosition: {x: 7.4, y: -9.1, z: 0}
   m_LocalScale: {x: 0.2158523, y: 0.2158523, z: 0.2158523}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1330006862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,8 +3141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 488.5}
-  m_SizeDelta: {x: 384, y: 80}
+  m_AnchoredPosition: {x: 0, y: 481.49}
+  m_SizeDelta: {x: 384, y: 53.006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605356910
 MonoBehaviour:
@@ -3168,7 +3168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.92867327, g: 0.9626694, b: 0.9710429, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3176,7 +3176,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 07f2bba479ee447b991146d5043d1e46, type: 3}
+    m_Font: {fileID: 12800000, guid: dd122f0fcc28540d7b352350460f946f, type: 3}
     m_FontSize: 137
     m_FontStyle: 0
     m_BestFit: 1
@@ -3804,11 +3804,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4969750153550688, guid: a47667bc05ada4c9d9b0442ff17b62a5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.61
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 4969750153550688, guid: a47667bc05ada4c9d9b0442ff17b62a5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -11.79
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 4969750153550688, guid: a47667bc05ada4c9d9b0442ff17b62a5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3840,7 +3840,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1983192834204740, guid: a47667bc05ada4c9d9b0442ff17b62a5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a47667bc05ada4c9d9b0442ff17b62a5, type: 2}
@@ -4281,7 +4281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &2137634829
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4338,7 +4338,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4dbe9bc2955074a60ac98766c930cf0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4350,7 +4350,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137634828}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -12.01, z: -0.03}
+  m_LocalPosition: {x: 1.75, y: -11.45, z: -0.03}
   m_LocalScale: {x: 0.25843623, y: 0.2584362, z: 0.25288194}
   m_Children: []
   m_Father: {fileID: 0}
