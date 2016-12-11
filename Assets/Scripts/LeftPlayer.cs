@@ -35,7 +35,8 @@ public class LeftPlayer : MonoBehaviour
 			GetComponent<SpriteRenderer>().flipX = true;
 			animator.SetBool("isWalking", true);
 		}
-		else {
+		else
+		{
 			animator.SetBool("isWalking", false);
 		}
 		if (Input.GetKey(KeyCode.S))
@@ -43,7 +44,8 @@ public class LeftPlayer : MonoBehaviour
 			transform.position += Vector3.down * Speed * Time.deltaTime;
 			animator.SetBool("isWalking", true);
 		}
-		else {
+		else
+		{
 			animator.SetBool("isWalking", false);
 		}
 		if (Input.GetKey(KeyCode.A))
@@ -51,18 +53,22 @@ public class LeftPlayer : MonoBehaviour
 			transform.position += Vector3.left * Speed * Time.deltaTime;
 			animator.SetBool("isWalking", true);
 		}
-		else {
+		else
+		{
 			animator.SetBool("isWalking", false);
 		}
+
 		if (Input.GetKey(KeyCode.D))
 		{
 			transform.position += Vector3.right * Speed * Time.deltaTime;
 			animator.SetBool("isWalking", true);
 			//GetComponent<Transform>().rotation = ;
 		}
-		else {
+		else
+		{
 			animator.SetBool("isWalking", false);
 		}
+
 		if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.LeftShift)))
 		{
 			transform.position += Vector3.up * Speed * Time.deltaTime * 2;
@@ -72,6 +78,7 @@ public class LeftPlayer : MonoBehaviour
 		{
 			animator.SetBool("isWalking", false);
 		}
+
 		if (Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.LeftShift)))
 		{
 			transform.position += Vector3.left * Speed * Time.deltaTime * 2;
@@ -81,6 +88,7 @@ public class LeftPlayer : MonoBehaviour
 		{
 			animator.SetBool("isWalking", false);
 		}
+
 		if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.LeftShift)))
 		{
 			transform.position += Vector3.down * Speed * Time.deltaTime * 2;
