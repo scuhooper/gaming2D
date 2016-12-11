@@ -49,13 +49,13 @@ public class God : MonoBehaviour
 	{
 		if (rightNum >= 5)
 		{
-			Ball gameScript = NewMethod();
+			//Ball gameScript = NewMethod();
 			Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
 
 		}
 		if (leftNum >= 5)
 		{
-			Ball gameScript = NewMethod();
+			//Ball gameScript = NewMethod();
 			Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
 		}
 	}

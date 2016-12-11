@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
 	public int pointValue = 1;
 	public GameObject BallSprite;
 	public Transform BallSpawner;
-
+	public GameObject Goal;
 	public Color lerpedColor;
 
 
 	void Start()
 	{
-
+		Goal.SetActive(false);
 	}
 
 
@@ -34,7 +35,12 @@ public class Ball : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
+			Goal.SetActive(true);
 
+		}
+		else
+		{
+			Goal.SetActive(false);
 		}
 		if (col.gameObject.name == "RightGoal")
 		{
@@ -43,8 +49,13 @@ public class Ball : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
+			Goal.SetActive(true);
 
 		}
+		else {
+			Goal.SetActive(false);
+		}
+
 
 	}
 
