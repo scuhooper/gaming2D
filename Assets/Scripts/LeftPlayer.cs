@@ -63,6 +63,42 @@ public class LeftPlayer : MonoBehaviour
 		else {
 			animator.SetBool("isWalking", false);
 		}
+		if (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.LeftShift)))
+		{
+			transform.position += Vector3.up * Speed * Time.deltaTime * 2;
+			animator.SetBool("isWalking", true);
+		}
+		else
+		{
+			animator.SetBool("isWalking", false);
+		}
+		if (Input.GetKey(KeyCode.A) && (Input.GetKey(KeyCode.LeftShift)))
+		{
+			transform.position += Vector3.left * Speed * Time.deltaTime * 2;
+			animator.SetBool("isWalking", true);
+		}
+		else
+		{
+			animator.SetBool("isWalking", false);
+		}
+		if (Input.GetKey(KeyCode.S) && (Input.GetKey(KeyCode.LeftShift)))
+		{
+			transform.position += Vector3.down * Speed * Time.deltaTime * 2;
+			animator.SetBool("isWalking", true);
+		}
+		else
+		{
+			animator.SetBool("isWalking", false);
+		}
+		if (Input.GetKey(KeyCode.D) && (Input.GetKey(KeyCode.LeftShift)))
+		{
+			transform.position += Vector3.right * Speed * Time.deltaTime * 2;
+			animator.SetBool("isWalking", true);
+		}
+		else
+		{
+			animator.SetBool("isWalking", false);
+		}
 
 		//Attack
 		if (Input.GetKeyDown(KeyCode.Q))
@@ -72,24 +108,24 @@ public class LeftPlayer : MonoBehaviour
 		else {
 			hitBox.SetActive(false);
 		}
-/*
-		//flips the player left and right
-		if (movex <= -0.1f)
-		{
-			// transform.rotation = Quaternion.Euler(0, 180, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
-			GetComponent<SpriteRenderer>().flipX = true;
-		}
-		if (movex >= 0.1f)
-		{
-			// transform.rotation = Quaternion.Euler(0, 0, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
-			GetComponent<SpriteRenderer>().flipX = false;
-		}
+		/*
+				//flips the player left and right
+				if (movex <= -0.1f)
+				{
+					// transform.rotation = Quaternion.Euler(0, 180, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
+					GetComponent<SpriteRenderer>().flipX = true;
+				}
+				if (movex >= 0.1f)
+				{
+					// transform.rotation = Quaternion.Euler(0, 0, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
+					GetComponent<SpriteRenderer>().flipX = false;
+				}
 
-*/
+		*/
 	}
-public void OnCollisionEnter2D(Collision2D col)
+	public void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag=="ball")
+		if (col.gameObject.tag == "ball")
 		{
 			col.transform.parent = transform;
 		}
