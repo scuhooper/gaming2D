@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 07f2bba479ee447b991146d5043d1e46
+timeCreated: 1481054628
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pigment DEMO
+  fontNames:
+  - Pigment DEMO
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
