@@ -3,7 +3,8 @@
  *		Purpose: Provide the basic framework for the player and player movement. Also used by all drug/powerup scripts.
  ********/
  
- using UnityEngine;
+using UnityEngine;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -11,13 +12,8 @@ public class Player : MonoBehaviour
 {
 
 	public float speed = 10.0F;
-	//public bool isWalking;
 	public GameObject hitBox;
-	public float Speed = 1f;
-	private float movex = 0f;
-	private float movey = 0f;
 	private Animator animator;
-	public double run = 1.5;
 
 	// variables used for combat and damage. These are accessed in some of the drug scripts.
 	// Questions, ask James
@@ -26,7 +22,7 @@ public class Player : MonoBehaviour
 
 	public string configFileName = "player1controls.ini";	// default config file name. this will just mimic player1's input on all players
 
-	Dictionary<string, string> controlMappings = new Dictionary<string, string>();	// hashtable for storing the generic strings describing what function happens with a string representing the button pressed
+	Dictionary<string, KeyCode> controlMappings = new Dictionary<string, KeyCode>();	// hashtable for storing the generic strings describing what function happens with the keycode representing the button pressed
 
 	// Use this for initialization
 	void Start()
@@ -55,6 +51,9 @@ public class Player : MonoBehaviour
 			moveVector += Vector3.left;
 		if ( Input.GetKey( controlMappings[ "right" ] ) )
 			moveVector += Vector3.right;
+
+		if ( Input.inputString != string.Empty )
+			Debug.Log( Input.inputString );
 		
 		if ( moveVector == Vector3.zero )	// no movement happeneing, reset animator bool
 		{
@@ -70,7 +69,6 @@ public class Player : MonoBehaviour
 			animator.SetBool( "isWalking", true );	// make sure animator is set to moving
 		}
 
-
 		//Attack
 		if ( Input.GetMouseButtonDown(0))
 		{
@@ -78,18 +76,6 @@ public class Player : MonoBehaviour
 		}
 		else {
 			hitBox.SetActive(false);
-		}
-
-		//flips the player left and right
-		if (movex <= -0.1f)
-		{
-			// transform.rotation = Quaternion.Euler(0, 180, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
-			GetComponent<SpriteRenderer>().flipX = true;
-		}
-		if (movex >= 0.1f)
-		{
-			// transform.rotation = Quaternion.Euler(0, 0, 0); **Changed by James. Flipping sprite makes using the transform of player in Teleport.cs easier to manage.**
-			GetComponent<SpriteRenderer>().flipX = false;
 		}
 	}
 
@@ -113,8 +99,11 @@ public class Player : MonoBehaviour
 		foreach ( string str in linesFromFile )
 		{
 			str.Trim( '\n' );	// remove new line characters
-			string[] tempArr = str.Split( '=' );	// uses = as the delimiter to break string into parts
-			controlMappings.Add( tempArr[ 0 ], tempArr[ 1 ] );	// create dictionary entry for current line
+			string[] tempArr = str.Split( '=' );    // uses = as the delimiter to break string into parts
+			
+			// create dictionary entry for current line
+			controlMappings.Add( tempArr[ 0 ], 
+				(KeyCode)Enum.Parse(typeof(KeyCode), tempArr[1]) );	// this line searches the KeyCode enum to match the string value from the file to it's corresponding enum value
 		}
 
 		// close file and reading stream
