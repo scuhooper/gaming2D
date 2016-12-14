@@ -3937,7 +3937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTeleportDistance: 5
---- !u!114 &1705499691
+--- !u!114 &1705499692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3945,15 +3945,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1705499688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e044e4076fe824591912593370b36995, type: 3}
+  m_Script: {fileID: 11500000, guid: 832d3101450e6418bb6c7a6796d86e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  hitBox: {fileID: 2100652271}
-  Speed: 3
+  hitBox: {fileID: 0}
+  Speed: 1
   run: 1.5
   armor: 0
   damage: 0
+  configFileName: player2controls.ini
 --- !u!114 &1705499698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4802,11 +4803,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2052674482}
---- !u!1 &2100652271 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012211081554, guid: e316c8041e82340f39e0250f75252b06,
-    type: 2}
-  m_PrefabInternal: {fileID: 1935839926}
 --- !u!1 &2137634828
 GameObject:
   m_ObjectHideFlags: 0

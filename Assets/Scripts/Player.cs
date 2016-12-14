@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
 			moveVector += Vector3.left;
 		if ( Input.GetKey( controlMappings[ "right" ] ) )
 			moveVector += Vector3.right;
-
+		
 		if ( moveVector == Vector3.zero )
 		{
 			animator.SetBool( "isWalking", false );
@@ -127,5 +127,8 @@ public class Player : MonoBehaviour
 				Debug.Log( "'" + s + "'" );
 			controlMappings.Add( tempArr[ 0 ], tempArr[ 1 ] );
 		}
+
+		fin.Close();
+		fstream.Close();
 	}
 }
