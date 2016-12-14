@@ -25,13 +25,13 @@ public class Cocaine : MonoBehaviour, IDrugAffectable
 
 	public void DrugEffectStart(Player p)
 	{
-		p.Speed *= 2;   // increase speed of player while high
+		p.speed *= 2;   // increase speed of player while high
 		StartCoroutine(DrugActive(p));  // run for the duration then reset
 	}
 
 	public void DrugEffectOver(Player p)
 	{
-		p.Speed *= 0.5f;    // reset speed to normal
+		p.speed *= 0.5f;    // reset speed to normal
 	}
 
 	public IEnumerator DrugActive(Player p)
