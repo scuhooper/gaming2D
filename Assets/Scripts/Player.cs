@@ -110,4 +110,42 @@ public class Player : MonoBehaviour
 		fin.Close();
 		fstream.Close();
 	}
+
+	/// <summary>
+	/// Updates the dictionary entry for a control
+	/// </summary>
+	/// <param name="controlName">Control name to be updated</param>
+	/// <param name="key">New key to associate with control</param>
+	public void ChangeControls( string controlName, KeyCode key )
+	{
+		controlMappings[ controlName ] = key;
+	}
+
+	public Dictionary<string, KeyCode> GetControlMappings()
+	{
+		return controlMappings;
+	}
+
+	public void SaveControlsToFile()
+	{
+		// open file and writing stream
+		FileStream fstream = new FileStream( configFileName, FileMode.Truncate );
+		StreamWriter fout = new StreamWriter( fstream );
+
+		int count = 1;
+		foreach ( KeyValuePair<string, KeyCode> pair in controlMappings )
+		{
+			if ( count < controlMappings.Count )
+			{
+				fout.WriteLine( pair.Key + "=" + pair.Value.ToString() );
+				count++;
+			}
+			else
+				fout.Write( pair.Key + "=" + pair.Value.ToString() );
+		}
+
+		fout.Flush();
+		fout.Close();
+		fstream.Close();
+	}
 }
