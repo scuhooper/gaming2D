@@ -46,14 +46,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 0dd7a223e0acd4298a6a1e1a038ef5ca, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!58 &58249308618779570
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -74,7 +74,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571485375570638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 0dd7a223e0acd4298a6a1e1a038ef5ca, type: 2}
   m_IsTrigger: 1
@@ -113,6 +113,9 @@ MonoBehaviour:
   pointValue: 1
   BallSprite: {fileID: 1571485375570638}
   BallSpawner: {fileID: 0}
+  Goal: {fileID: 0}
+  lerpedColor: {r: 0, g: 0, b: 0, a: 0}
+  kickForce: 10
 --- !u!114 &114367010150733056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,15 +170,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571485375570638}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29354462, y: 0.2935446, z: 0.2935446}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1679}
+  m_LocalScale: {x: 0.22896479, y: 0.22896478, z: 0.22896478}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4.5, y: -10}
+  m_AnchoredPosition: {x: 4.525, y: -10.123}
   m_SizeDelta: {x: 2.31, y: 2.36}
   m_Pivot: {x: 0.5, y: -0}
 --- !u!250 &250849984575537144
@@ -184,7 +187,7 @@ PointEffector2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571485375570638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
