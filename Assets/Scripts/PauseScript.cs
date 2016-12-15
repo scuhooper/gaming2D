@@ -3,12 +3,15 @@
  *		Purpose:Pauses the game, as well shows a menu of options.
  ********/
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class PauseScript : MonoBehaviour {
 
 	List<Player> playerList = new List<Player>();	// list to hold all players in game
     public Canvas pauseCanvas;
+	public GameObject cardboardSign;
+	public GameObject pauseMenuButtons;
     bool isPaused;
 
 	// Use this for initialization
@@ -53,4 +56,45 @@ public class PauseScript : MonoBehaviour {
             Time.timeScale = 1;
         }
     }
+
+	public void OnControlsButtonClick()
+	{
+		StartCoroutine( TurnCardboard() );
+	}
+
+	public void OnOptionsButtonClick()
+	{
+
+	}
+
+	public void OnQuitButtonClick()
+	{
+		Application.Quit();
+	}
+
+	IEnumerator TurnCardboard()
+	{
+		if ( cardboardSign.transform.rotation.eulerAngles == Vector3.zero )
+		{
+			float angle = 0f;
+			while ( angle != 180 )
+			{
+				angle += 5;
+				if ( angle == 90 )
+					pauseMenuButtons.SetActive( false );
+				cardboardSign.transform.rotation = Quaternion.Euler( 0, angle, 0 );
+				yield return null;
+			}
+		}
+		else
+		{
+			float angle = 180;
+			while ( angle != 0 )
+			{
+				angle -= 5;
+				cardboardSign.transform.rotation = Quaternion.Euler( 0, angle, 0 );
+				yield return null;
+			}
+		}
+	}
 }

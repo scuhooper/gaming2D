@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author: James Keeling
+ *		Author:  James Keeling
  *		Purpose: Provide the basic framework for the player and player movement. Also used by all drug/powerup scripts.
  ********/
  
@@ -121,29 +121,37 @@ public class Player : MonoBehaviour
 		controlMappings[ controlName ] = key;
 	}
 
+	/// <summary>
+	/// Returns the current control mappings dictionary
+	/// </summary>
+	/// <returns></returns>
 	public Dictionary<string, KeyCode> GetControlMappings()
 	{
 		return controlMappings;
 	}
 
+	/// <summary>
+	/// Saves the control mappings dictionary to the specified config file
+	/// </summary>
 	public void SaveControlsToFile()
 	{
 		// open file and writing stream
 		FileStream fstream = new FileStream( configFileName, FileMode.Truncate );
 		StreamWriter fout = new StreamWriter( fstream );
 
-		int count = 1;
-		foreach ( KeyValuePair<string, KeyCode> pair in controlMappings )
+		int count = 1;	// count to see if we are on the last entry
+		foreach ( KeyValuePair<string, KeyCode> pair in controlMappings )	// cycle through dictionary
 		{
-			if ( count < controlMappings.Count )
+			if ( count < controlMappings.Count )	// count is not at the end of the control mappings
 			{
-				fout.WriteLine( pair.Key + "=" + pair.Value.ToString() );
-				count++;
+				fout.WriteLine( pair.Key + "=" + pair.Value.ToString() );	// write the whole line and newline character
+				count++;	// increment our count
 			}
 			else
-				fout.Write( pair.Key + "=" + pair.Value.ToString() );
+				fout.Write( pair.Key + "=" + pair.Value.ToString() );	// at the end of the file, don't write a newline character
 		}
 
+		// flush to disk and close file and writer streams
 		fout.Flush();
 		fout.Close();
 		fstream.Close();

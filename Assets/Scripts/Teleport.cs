@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author: James Keeling
+ *		Author:  James Keeling
  *		Purpose: This server to create a line/ray from the player to the mouse, 
  *				 show a mostly see-through player at the end of the line for where they will be placed after the teleport, 
  *				 and setting the player at the end of the line on their input.

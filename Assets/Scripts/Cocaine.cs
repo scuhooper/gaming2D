@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author: James Keeling
+ *		Author:  James Keeling
  *		Purpose: Provide the basic framework for the cocaine pickup drug effect. This doubles the characters speed. Collecting more consecutively will keep multiplying speed.
  ********/
 

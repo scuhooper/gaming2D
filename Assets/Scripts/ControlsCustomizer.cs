@@ -1,6 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿/*********
+ *		Author:  James Keeling
+ *		Purpose: Provide the basic framework for customizing a players controls. This script will need to be placed on the game logic object
+ *				 that is used to handle the main menu and pause menu in each scene. This script also makes calls to the Player script and will
+ *				 need to be updated if the Player script is changed
+ ********/
+
+ using System;
 using UnityEngine;
 
 public class ControlsCustomizer : MonoBehaviour {
@@ -22,11 +27,11 @@ public class ControlsCustomizer : MonoBehaviour {
 	/// <param name="controlName">Control name to be modified</param>
 	void CustomizeControl( Player p, string controlName )
 	{
-		KeyCode keyCode = GetKeyPressed();
-		if ( keyCode == KeyCode.Escape )
-			return;
+		KeyCode keyCode = GetKeyPressed();	// need the keycode for what was pressed - call function from this file to get it
+		if ( keyCode == KeyCode.Escape )	// key cannot be escape as it is used for the menu and as an exit case from the get key pressed function
+			return;	// if this happens, just exit the funciton leaving everything as is
 
-		p.ChangeControls( controlName, keyCode );
+		p.ChangeControls( controlName, keyCode );	// pass in a valid key to change the dictionary entry
 	}
 
 	/// <summary>
@@ -35,14 +40,17 @@ public class ControlsCustomizer : MonoBehaviour {
 	/// <returns>Returns either the key code pressed or Escape if an invalid key code is given</returns>
 	KeyCode GetKeyPressed()
 	{
-		foreach ( KeyCode code in Enum.GetValues( typeof( KeyCode ) ) )
+		while ( !Input.anyKey )	// wait until an input is detected
+			continue;
+
+		foreach ( KeyCode code in Enum.GetValues( typeof( KeyCode ) ) )	// cycle through the KeyCode enum to check what key has been pressed
 		{
-			if ( Input.GetKey( code ) )
+			if ( Input.GetKey( code ) )	// check to see if this is the right key being pressed
 			{
-				return code;
+				return code;	// return that key code if so
 			}
 		}
-		return KeyCode.Escape;
+		return KeyCode.Escape;	// exit condition of an invalid entry - Customize Control should check for this condition
 	}
 
 	/// <summary>
@@ -51,6 +59,6 @@ public class ControlsCustomizer : MonoBehaviour {
 	/// <param name="p">Which player's controls to save</param>
 	void UpdatePlayerConfigFile( Player p )
 	{
-		p.SaveControlsToFile();
+		p.SaveControlsToFile();	// call the specific player's function to save their controls to their config file
 	}
 }
