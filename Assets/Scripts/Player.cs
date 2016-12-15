@@ -51,9 +51,6 @@ public class Player : MonoBehaviour
 			moveVector += Vector3.left;
 		if ( Input.GetKey( controlMappings[ "right" ] ) )
 			moveVector += Vector3.right;
-
-		if ( Input.inputString != string.Empty )
-			Debug.Log( Input.inputString );
 		
 		if ( moveVector == Vector3.zero )	// no movement happeneing, reset animator bool
 		{

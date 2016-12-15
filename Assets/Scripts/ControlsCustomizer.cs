@@ -5,14 +5,18 @@
  *				 need to be updated if the Player script is changed
  ********/
 
- using System;
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Threading;
 
 public class ControlsCustomizer : MonoBehaviour {
+	KeyCode keyCode;
 
 	// Use this for initialization
 	void Start () {
-		
+		keyCode = KeyCode.Escape;
 	}
 	
 	// Update is called once per frame
@@ -21,43 +25,35 @@ public class ControlsCustomizer : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// This function sets the key for a particular player's control to be changed to a value other than Escape.
+	/// This coroutine will wait for user input then update their control mappings with the next button pressed. If button is escape, it cancels the coroutine.
 	/// </summary>
-	/// <param name="p">Which Player's controls to modify</param>
-	/// <param name="controlName">Control name to be modified</param>
-	void CustomizeControl( Player p, string controlName )
+	/// <param name="p">Player who's controls are being adjusted</param>
+	/// <param name="currentButton">Button that called this function</param>
+	/// <returns></returns>
+	public IEnumerator WaitForInput( Player p, GameObject currentButton )
 	{
-		KeyCode keyCode = GetKeyPressed();	// need the keycode for what was pressed - call function from this file to get it
-		if ( keyCode == KeyCode.Escape )	// key cannot be escape as it is used for the menu and as an exit case from the get key pressed function
-			return;	// if this happens, just exit the funciton leaving everything as is
-
-		p.ChangeControls( controlName, keyCode );	// pass in a valid key to change the dictionary entry
-	}
-
-	/// <summary>
-	/// Function returns the key code of whatever key is pressed.
-	/// </summary>
-	/// <returns>Returns either the key code pressed or Escape if an invalid key code is given</returns>
-	KeyCode GetKeyPressed()
-	{
-		while ( !Input.anyKey )	// wait until an input is detected
-			continue;
-
-		foreach ( KeyCode code in Enum.GetValues( typeof( KeyCode ) ) )	// cycle through the KeyCode enum to check what key has been pressed
+		while ( !Input.anyKeyDown ) // wait until an input is detected
 		{
-			if ( Input.GetKey( code ) )	// check to see if this is the right key being pressed
+			yield return null;
+		}
+
+		foreach ( KeyCode code in Enum.GetValues( typeof( KeyCode ) ) ) // cycle through the KeyCode enum to check what key has been pressed
+		{
+			if ( Input.GetKey( code ) ) // check to see if this is the right key being pressed
 			{
-				return code;	// return that key code if so
+				if ( code == KeyCode.Escape )	// leave if button is escape
+					break;
+
+				currentButton.GetComponentInChildren<Text>().text = code.ToString();	// set the text of the button to reflect the new button's name
+				p.ChangeControls( currentButton.name, code );   // map the new code to the player's controls dictionary
 			}
 		}
-		return KeyCode.Escape;	// exit condition of an invalid entry - Customize Control should check for this condition
 	}
-
 	/// <summary>
 	/// Saves a player's control mappings to a file.
 	/// </summary>
 	/// <param name="p">Which player's controls to save</param>
-	void UpdatePlayerConfigFile( Player p )
+	public void UpdatePlayerConfigFile( Player p )
 	{
 		p.SaveControlsToFile();	// call the specific player's function to save their controls to their config file
 	}
