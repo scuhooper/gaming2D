@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author:  James Keeling, Cory Brown
+ *		Author: James Keeling, Cory Brown
  *		Purpose: Provide the basic framework for the joint pickup drug effect. This resembles bullet time or SlowMo.
  ********/
  

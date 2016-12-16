@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
-			//Goal.SetActive(true);
+			Goal.SetActive(true);
 
 		}
 		else
@@ -52,11 +52,11 @@ public class Ball : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
-			//Goal.SetActive(true);
+			Goal.SetActive(true);
 
 		}
 		else {
-			//Goal.SetActive(false);
+			Goal.SetActive(false);
 		}
 
 

@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: d321de1d0b9914b2aac7e8a7c31907c9
+timeCreated: 1477347991
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RandomChar_0
+    21300002: RandomChar_1
+    21300004: RandomChar_2
+    21300006: RandomChar_3
+    21300008: RandomChar_4
+    21300010: RandomChar_5
+    21300012: RandomChar_6
+    21300014: RandomChar_7
+    21300016: RandomChar_8
+    21300018: RandomChar_9
+    21300020: RandomChar_10
+    21300022: RandomChar_11
+    21300024: RandomChar_12
+    21300026: RandomChar_13
+    21300028: RandomChar_14
+    21300030: RandomChar_16
+    21300032: RandomChar_17
+    21300034: RandomChar_18
+    21300036: RandomChar_19
+    21300038: RandomChar_20
+    21300040: RandomChar_21
+    21300042: RandomChar_73
+    21300044: RandomChar_74
+    21300046: RandomChar_76
+    21300048: RandomChar_77
+    21300050: RandomChar_78
+    21300052: RandomChar_79
+    21300054: RandomChar_80
+    21300056: RandomChar_81
+    21300058: RandomChar_82
+    21300060: RandomChar_83
+    21300062: RandomChar_84
+    21300064: RandomChar_85
+    21300066: RandomChar_88
+    21300068: RandomChar_89
+    21300070: RandomChar_92
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RandomChar_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1224
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_2
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1204
+        width: 338
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_4
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1216
+        width: 383
+        height: 821
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_5
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1204
+        width: 334
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_6
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1204
+        width: 332
+        height: 822
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_7
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 1209
+        width: 364
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_8
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 1204
+        width: 347
+        height: 825
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_9
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 1212
+        width: 363
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_10
+      rect:
+        serializedVersion: 2
+        x: 3589
+        y: 1209
+        width: 360
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_11
+      rect:
+        serializedVersion: 2
+        x: 3980
+        y: 1212
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_12
+      rect:
+        serializedVersion: 2
+        x: 4385
+        y: 1208
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_13
+      rect:
+        serializedVersion: 2
+        x: 4788
+        y: 1224
+        width: 362
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_14
+      rect:
+        serializedVersion: 2
+        x: 5190
+        y: 1224
+        width: 363
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_16
+      rect:
+        serializedVersion: 2
+        x: 5659
+        y: 1220
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_17
+      rect:
+        serializedVersion: 2
+        x: 6050
+        y: 1224
+        width: 366
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_19
+      rect:
+        serializedVersion: 2
+        x: 6503
+        y: 1204
+        width: 363
+        height: 817
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_20
+      rect:
+        serializedVersion: 2
+        x: 6984
+        y: 1204
+        width: 360
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_21
+      rect:
+        serializedVersion: 2
+        x: 7447
+        y: 1184
+        width: 362
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 198
+        width: 363
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_74
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 202
+        width: 363
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_76
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 182
+        width: 363
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_77
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 182
+        width: 360
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_78
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 162
+        width: 362
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_79
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 158
+        width: 360
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_80
+      rect:
+        serializedVersion: 2
+        x: 2689
+        y: 159
+        width: 363
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_81
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 139
+        width: 363
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_82
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 139
+        width: 362
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_83
+      rect:
+        serializedVersion: 2
+        x: 4086
+        y: 119
+        width: 361
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_84
+      rect:
+        serializedVersion: 2
+        x: 4584
+        y: 110
+        width: 363
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_85
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 110
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_88
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 90
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_89
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 90
+        width: 362
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RandomChar_92
+      rect:
+        serializedVersion: 2
+        x: 6371
+        y: 70
+        width: 363
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
