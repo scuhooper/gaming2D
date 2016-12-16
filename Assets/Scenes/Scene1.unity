@@ -399,7 +399,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72724087}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.00008, y: 1.00008, z: 1.00008}
   m_Children:
@@ -407,11 +407,11 @@ RectTransform:
   - {fileID: 1326909110}
   m_Father: {fileID: 1581703854}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1771, y: 2}
-  m_SizeDelta: {x: 126, y: 87}
+  m_AnchoredPosition: {x: 1912, y: 2}
+  m_SizeDelta: {x: 144, y: 99}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &72724089
 MonoBehaviour:
@@ -1157,6 +1157,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 333639799}
+--- !u!1 &337045186 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012211081554, guid: e316c8041e82340f39e0250f75252b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1935839926}
 --- !u!1 &367249639 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1571485375570638, guid: 67875436c63d54f3dac4fb54f4546c02,
@@ -1212,12 +1217,12 @@ Prefab:
     - target: {fileID: 224819462793700392, guid: 67875436c63d54f3dac4fb54f4546c02,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 4.525
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 224819462793700392, guid: 67875436c63d54f3dac4fb54f4546c02,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -10.123
+      value: -8.375
       objectReference: {fileID: 0}
     - target: {fileID: 224819462793700392, guid: 67875436c63d54f3dac4fb54f4546c02,
         type: 2}
@@ -1554,7 +1559,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587854196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6543193, y: -1.2513332, z: 0}
+  m_LocalPosition: {x: -2.33, y: -0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1667324570}
@@ -2537,6 +2542,55 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 923430063}
+--- !u!1 &947356406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 947356408}
+  - component: {fileID: 947356407}
+  m_Layer: 0
+  m_Name: Drug Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947356407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947356406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d170d95db6101e8428f4cc44920ce7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drugList:
+  - {fileID: 1000011847293374, guid: 98424b5a415e64528bec8fafa749ab89, type: 2}
+  - {fileID: 1492322859452438, guid: dd519bb4d3ab71b4b96e9db63fd1790d, type: 2}
+  - {fileID: 1132458972519686, guid: 5a9f88a361671934d813760cfdc3f684, type: 2}
+--- !u!4 &947356408
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947356406}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.407829, y: -2.3548708, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1387594716}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &975305475 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012211081554, guid: e316c8041e82340f39e0250f75252b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 617474792}
 --- !u!1 &1005094068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,6 +3241,50 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108184513}
+--- !u!1 &1133923659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1133923661}
+  - component: {fileID: 1133923660}
+  m_Layer: 0
+  m_Name: Drug Spawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1133923660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133923659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d170d95db6101e8428f4cc44920ce7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drugList:
+  - {fileID: 1000011847293374, guid: 98424b5a415e64528bec8fafa749ab89, type: 2}
+  - {fileID: 1492322859452438, guid: dd519bb4d3ab71b4b96e9db63fd1790d, type: 2}
+  - {fileID: 1132458972519686, guid: 5a9f88a361671934d813760cfdc3f684, type: 2}
+--- !u!4 &1133923661
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133923659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.342171, y: 2.6451292, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1387594716}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140292691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,7 +3375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1163944183
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3613,7 +3711,6 @@ GameObject:
   - component: {fileID: 1214837962}
   - component: {fileID: 1214837961}
   - component: {fileID: 1214837965}
-  - component: {fileID: 1214837964}
   - component: {fileID: 1214837963}
   - component: {fileID: 1214837966}
   m_Layer: 0
@@ -3685,20 +3782,6 @@ BoxCollider2D:
   m_Offset: {x: 0.16119008, y: 2.135115}
   serializedVersion: 2
   m_Size: {x: 8.2651825, y: 0.71721315}
---- !u!58 &1214837964
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1214837960}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.82, y: -0.91}
-  serializedVersion: 2
-  m_Radius: 2.24
 --- !u!61 &1214837965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3710,9 +3793,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.16935633, y: -0.05605577}
+  m_Offset: {x: 0.16920185, y: -4.1323166}
   serializedVersion: 2
-  m_Size: {x: 8.245203, y: 2.717202}
+  m_Size: {x: 8.245203, y: 10.86931}
 --- !u!114 &1214837966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3879,7 +3962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  hitBox: {fileID: 0}
+  hitBox: {fileID: 975305475}
   armor: 0
   damage: 0
   configFileName: player1controls.ini
@@ -4137,12 +4220,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295510362}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -10.76, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.407829, y: 2.6451292, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1387594716}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295843375
 GameObject:
@@ -4337,7 +4420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1330006862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4568,6 +4651,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1375526041}
+--- !u!1 &1381562480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1381562482}
+  - component: {fileID: 1381562481}
+  m_Layer: 0
+  m_Name: Drug Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1381562481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381562480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d170d95db6101e8428f4cc44920ce7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drugList:
+  - {fileID: 1000011847293374, guid: 98424b5a415e64528bec8fafa749ab89, type: 2}
+  - {fileID: 1492322859452438, guid: dd519bb4d3ab71b4b96e9db63fd1790d, type: 2}
+  - {fileID: 1132458972519686, guid: 5a9f88a361671934d813760cfdc3f684, type: 2}
+--- !u!4 &1381562482
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381562480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.342171, y: -2.3548708, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1387594716}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1387594715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1387594716}
+  m_Layer: 0
+  m_Name: Power Up Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387594716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387594715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.157829, y: -8.145129, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1295510364}
+  - {fileID: 947356408}
+  - {fileID: 1381562482}
+  - {fileID: 1133923661}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426957130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,9 +4872,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.21538731, y: -5.0349174}
+  m_Offset: {x: -0.21538731, y: -6.275642}
   serializedVersion: 2
-  m_Size: {x: 13.3646555, y: 0.6001673}
+  m_Size: {x: 13.3646555, y: 3.0816283}
 --- !u!61 &1438994665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4727,9 +4886,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.23439236, y: 4.458456}
+  m_Offset: {x: -0.23439236, y: 5.535569}
   serializedVersion: 2
-  m_Size: {x: 13.377326, y: 1.753088}
+  m_Size: {x: 13.377326, y: 3.9073143}
 --- !u!61 &1438994666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4741,9 +4900,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 7.006637, y: -3.3805518}
+  m_Offset: {x: 8.008533, y: -4.6211534}
   serializedVersion: 2
-  m_Size: {x: 1.1188413, y: 3.9088945}
+  m_Size: {x: 3.122651, y: 6.3900967}
 --- !u!61 &1438994667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4755,9 +4914,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 6.98, y: 2.7544446}
+  m_Offset: {x: 8.023667, y: 3.8315568}
   serializedVersion: 2
-  m_Size: {x: 1.0735279, y: 5.1611094}
+  m_Size: {x: 3.1607895, y: 7.3153334}
 --- !u!61 &1438994668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4769,9 +4928,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -7.4539557, y: -3.3805518}
+  m_Offset: {x: -8.171989, y: -4.6211524}
   serializedVersion: 2
-  m_Size: {x: 1.092112, y: 3.9088945}
+  m_Size: {x: 2.528167, y: 6.3900948}
 --- !u!61 &1438994669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4783,9 +4942,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -7.4632444, y: 2.7544446}
+  m_Offset: {x: -8.181278, y: 3.8315568}
   serializedVersion: 2
-  m_Size: {x: 1.0735279, y: 5.1611094}
+  m_Size: {x: 2.5095797, y: 7.3153334}
 --- !u!1 &1449636330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5683,7 +5842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  hitBox: {fileID: 0}
+  hitBox: {fileID: 337045186}
   armor: 0
   damage: 0
   configFileName: player2controls.ini
@@ -6788,7 +6947,6 @@ GameObject:
   - component: {fileID: 1996766293}
   - component: {fileID: 1996766292}
   - component: {fileID: 1996766291}
-  - component: {fileID: 1996766290}
   - component: {fileID: 1996766289}
   m_Layer: 0
   m_Name: RightGoal
@@ -6811,20 +6969,6 @@ BoxCollider2D:
   m_Offset: {x: -0.0039697723, y: 2.0279062}
   serializedVersion: 2
   m_Size: {x: 8.595133, y: 0.5027964}
---- !u!58 &1996766290
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1996766288}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.82, y: -0.91}
-  serializedVersion: 2
-  m_Radius: 2.24
 --- !u!61 &1996766291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6836,9 +6980,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.018277539, y: -0.05605368}
+  m_Offset: {x: -0.01805437, y: -6.0941167}
   serializedVersion: 2
-  m_Size: {x: 8.6205225, y: 2.717202}
+  m_Size: {x: 8.6205225, y: 14.792596}
 --- !u!212 &1996766292
 SpriteRenderer:
   m_ObjectHideFlags: 0

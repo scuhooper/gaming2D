@@ -23,7 +23,8 @@ public class joint : MonoBehaviour, IDrugAffectable
 
 	public void DrugEffectStart( Player p )
 	{
-		Time.timeScale = 0.5f;	// Produce slow motion effect
+		Time.timeScale = 0.5f;  // Produce slow motion effect
+		Debug.Log( Time.timeScale );
 	}
 
 	public void DrugEffectOver( Player p )

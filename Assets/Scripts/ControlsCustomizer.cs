@@ -9,14 +9,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading;
 
 public class ControlsCustomizer : MonoBehaviour {
-	KeyCode keyCode;
 
 	// Use this for initialization
 	void Start () {
-		keyCode = KeyCode.Escape;
+		
 	}
 	
 	// Update is called once per frame

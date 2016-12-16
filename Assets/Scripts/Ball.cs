@@ -38,7 +38,6 @@ public class Ball : MonoBehaviour
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
 			//Goal.SetActive(true);
-
 		}
 		else
 		{
@@ -53,22 +52,23 @@ public class Ball : MonoBehaviour
 			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
 			transform.parent = BallSpawner;
 			//Goal.SetActive(true);
-
 		}
 		else {
 			//Goal.SetActive(false);
 		}
-
-
 	}
 
 	private void OnCollisionEnter2D( Collision2D collision )
 	{
+		// only care about collision if it is with player
 		if ( collision.gameObject.tag == "player" )
 		{
-			Vector2 forceToBall = new Vector2( transform.position.x - collision.gameObject.transform.position.x, transform.position.y - collision.transform.position.y );
-			forceToBall.Normalize();
-			GetComponent<Rigidbody2D>().AddForce( forceToBall * kickForce, ForceMode2D.Impulse );
+			// create a vector from the difference between the ball and players positions
+			Vector2 forceToBall = new Vector2( transform.position.x - collision.gameObject.transform.position.x, 
+												transform.position.y - collision.transform.position.y );
+
+			forceToBall.Normalize();	// normalize created vector
+			GetComponent<Rigidbody2D>().AddForce( forceToBall * kickForce, ForceMode2D.Impulse );	// add the vector times our kicking force as an impulse to the ball
 		}
 	}
 
