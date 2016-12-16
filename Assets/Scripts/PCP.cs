@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author: James Keeling
+ *		Author:  James Keeling
  *		Purpose: Class for PCP effect. This makes the player appear larger, take half damage, and deal double damage.
  ********/
  

@@ -1,5 +1,5 @@
 ﻿/*********
- *		Author: James Keeling
+ *		Author:  James Keeling
  *		Purpose: Basic interface for drug pickup effects.
  ********/
 
