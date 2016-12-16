@@ -32,7 +32,7 @@ public class DrugSpawner : MonoBehaviour {
 			yield return null;
 		}
 
-		yield return new WaitForSeconds( rand.Next( 5, 19 ) );	// wait a random amount of time before preceding. acts like a spawn delay
+		yield return new WaitForSeconds( rand.Next( 5, 10 ) );	// wait a random amount of time before preceding. acts like a spawn delay
 		spawnedDrug = Instantiate( drugList[ rand.Next( 0, drugList.Length ) ], transform.position, transform.rotation );	// make a new drug pickup and store its object
 		bIsRunning = false;	// coroutine is stopping
 	}

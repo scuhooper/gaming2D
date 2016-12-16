@@ -10,6 +10,7 @@ TagManager:
   - ball
   - LeftGoal
   - RightGoal
+  - Goal
   layers:
   - Default
   - TransparentFX

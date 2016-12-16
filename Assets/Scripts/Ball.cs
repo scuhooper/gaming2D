@@ -6,55 +6,44 @@ using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
-	public int pointValue = 1;
 	public GameObject BallSprite;
+	public GameObject player1;
+	public GameObject player2;
+	public GameObject player1Spawn;
+	public GameObject player2Spawn;
 	public Transform BallSpawner;
-	public GameObject Goal;
-	public Color lerpedColor;
 	public float kickForce;
 
-
+	God gameScript;
+	
 	void Start()
 	{
-		Goal.SetActive(false);
+		gameScript = FindObjectOfType<God>();
 	}
 
 
 	void Update()
 	{
 
-
-
 	}
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.name == "LeftGoal")
+		if ( col.gameObject.tag == "Goal" )	// check if trigger is a goal
 		{
-			God gameScript = NewMethod();
-			gameScript.AddScoreLeft(pointValue);
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
-			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
-			transform.parent = BallSpawner;
-			//Goal.SetActive(true);
-		}
-		else
-		{
-			Goal.SetActive(false);
-		}
-		if (col.gameObject.name == "RightGoal")
-		{
-			God gameScript = NewMethod();
-			gameScript.AddScoreRight(pointValue);
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-			transform.position = Vector3.Lerp(transform.position, BallSpawner.position, 1);
-			lerpedColor = GetComponent<SpriteRenderer>().color = Color.LerpUnclamped(Color.green, Color.red, Mathf.PingPong(Time.time, 1));
-			transform.parent = BallSpawner;
-			//Goal.SetActive(true);
-		}
-		else {
-			//Goal.SetActive(false);
+			if ( col.gameObject.name == "LeftGoal" )	// if left goal
+			{
+				//	update score text
+				gameScript.AddScoreRight();
+			}
+			else if ( col.gameObject.name == "RightGoal" )
+			{
+				// update score
+				gameScript.AddScoreLeft();
+			}
+
+			// reset players and ball
+			ResetGameField();
 		}
 	}
 
@@ -72,8 +61,16 @@ public class Ball : MonoBehaviour
 		}
 	}
 
-	private static God NewMethod()
+	/// <summary>
+	/// Resets the position and velocity of the ball to its starting point. Resets players to their spawning points as well.
+	/// </summary>
+	void ResetGameField()
 	{
-		return FindObjectOfType<God>();
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;	// stop ball from moving
+		transform.position = BallSpawner.transform.position;	// set ball back in center
+
+		// move players to starting positions
+		player1.transform.position = player1Spawn.transform.position;
+		player2.transform.position = player2Spawn.transform.position;
 	}
 }

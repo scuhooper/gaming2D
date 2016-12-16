@@ -23,10 +23,7 @@ GameObject:
   - component: {fileID: 95220178768554852}
   - component: {fileID: 58249308618779570}
   - component: {fileID: 50236363243155800}
-  - component: {fileID: 250849984575537144}
-  - component: {fileID: 114367010150733056}
   - component: {fileID: 114036492469328852}
-  - component: {fileID: 58927159889350426}
   m_Layer: 12
   m_Name: Ball
   m_TagString: ball
@@ -68,20 +65,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1.18}
   serializedVersion: 2
   m_Radius: 1.18
---- !u!58 &58927159889350426
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571485375570638}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0dd7a223e0acd4298a6a1e1a038ef5ca, type: 2}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 1.18}
-  serializedVersion: 2
-  m_Radius: 1.5412966
 --- !u!95 &95220178768554852
 Animator:
   serializedVersion: 3
@@ -110,24 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9553c30cc5f4f30966bff8ed422f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 1
   BallSprite: {fileID: 1571485375570638}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  player1Spawn: {fileID: 0}
+  player2Spawn: {fileID: 0}
   BallSpawner: {fileID: 0}
-  Goal: {fileID: 0}
-  lerpedColor: {r: 0, g: 0, b: 0, a: 0}
   kickForce: 10
---- !u!114 &114367010150733056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571485375570638}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819aa4995f8bf4942aa75fd8b111b30d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 0
 --- !u!212 &212802740998197396
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -178,25 +150,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4.525, y: -10.123}
+  m_AnchoredPosition: {x: 4.1, y: -8.375}
   m_SizeDelta: {x: 2.31, y: 2.36}
   m_Pivot: {x: 0.5, y: -0}
---- !u!250 &250849984575537144
-PointEffector2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571485375570638}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 256
-  m_ForceMagnitude: 1
-  m_ForceVariation: -1
-  m_DistanceScale: 1
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 0
-  m_Drag: 0
-  m_AngularDrag: 0

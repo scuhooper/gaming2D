@@ -3442,7 +3442,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.21
-  m_Text: Barry's Big Adventure
+  m_Text: Hobo Hotbox Soccer
 --- !u!222 &776643179
 CanvasRenderer:
   m_ObjectHideFlags: 0

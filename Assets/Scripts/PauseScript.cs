@@ -16,10 +16,14 @@ public class PauseScript : MonoBehaviour {
     public Canvas pauseCanvas;
 	public GameObject cardboardSign;
 	public GameObject pauseMenuButtons;
+    public GameObject optionsMenu;
 	public GameObject controlsMenu;
 	public GameObject playerMenu;
 	public GameObject customControlMenu;
-	public Text[] customControlsText;
+    public GameObject customOptionsMenu;
+    public AudioSource masterSound;
+
+    public Text[] customControlsText;
 
     bool isPaused;	// is the game paused
 	
@@ -78,15 +82,16 @@ public class PauseScript : MonoBehaviour {
 
 	public void OnControlsButtonClick()
 	{
-		StartCoroutine( TurnCardboard() );	// flip the screen image and enable the correct menu
+		StartCoroutine( TurnControlsCardboard() );	// flip the screen image and enable the correct menu
 	}
 
 	public void OnOptionsButtonClick()
 	{
+        StartCoroutine(TurnOptionsCardboard());    // flip the screen image and enable the correct menu
 
-	}
+    }
 
-	public void OnQuitButtonClick()
+    public void OnQuitButtonClick()
 	{
 		Application.Quit();	// exit game
 	}
@@ -109,11 +114,11 @@ public class PauseScript : MonoBehaviour {
 		StartCoroutine( contCustom.WaitForInput( p, currentButton ) );	// send the button and current player being edited to customize that control
 	}
 
-	public void OnBackButtonClick()
+	public void OnControlsBackButtonClick()
 	{
 		// if the player menu is being used
 		if ( playerMenu.activeInHierarchy )
-			StartCoroutine( TurnCardboard() );  // rotate the cardboard back to regular pause menu
+			StartCoroutine( TurnControlsCardboard() );  // rotate the cardboard back to regular pause menu
 		else
 		{
 			// control menu is showing
@@ -123,12 +128,29 @@ public class PauseScript : MonoBehaviour {
 			playerMenu.SetActive( true );	// show the player menu
 		}
 	}
+    public void OnOptionsBackButtonClick()
+    {
+        // if the player menu is being used
+        if (playerMenu.activeInHierarchy)
+            StartCoroutine(TurnOptionsCardboard());  // rotate the cardboard back to regular pause menu
+        else
+        {
+            // control menu is showing
 
-	/// <summary>
-	/// Displays the key name of the selected player's button mappings
-	/// </summary>
-	/// <param name="player">Player's controls to show</param>
-	void ShowControlButtonMappings( Player player )
+            p.SaveControlsToFile(); // save the players controls to their corresponding file
+            customOptionsMenu.SetActive(false); // hide the options customization menu
+            playerMenu.SetActive(true); // show the player menu
+        }
+
+        
+
+    }
+
+    /// <summary>
+    /// Displays the key name of the selected player's button mappings
+    /// </summary>
+    /// <param name="player">Player's controls to show</param>
+    void ShowControlButtonMappings( Player player )
 	{
 		int count = 0;	// acts as an iterator
 
@@ -144,7 +166,7 @@ public class PauseScript : MonoBehaviour {
 	/// Rotates the cardboard image and swaps between the pause menu and the controls menu
 	/// </summary>
 	/// <returns></returns>
-	IEnumerator TurnCardboard()
+	IEnumerator TurnControlsCardboard()
 	{
 		if ( cardboardSign.transform.rotation.eulerAngles == Vector3.zero )	// if sign rotation is 0
 		{
@@ -180,4 +202,47 @@ public class PauseScript : MonoBehaviour {
 			}
 		}
 	}
+    /// <summary>
+	/// Rotates the cardboard image and swaps between the pause menu and the options menu
+	/// </summary>
+	/// <returns></returns>
+    IEnumerator TurnOptionsCardboard()
+    {
+        if (cardboardSign.transform.rotation.eulerAngles == Vector3.zero)   // if sign rotation is 0
+        {
+            float angle = 0f;   // set initial angle by which to rotate
+            while (angle != 180)    // do until is is at 180 
+            {
+                angle += 5; // increment angle by 5 degrees
+                if (angle == 90)    // change what is active at 90 degrees, makes it appear to only be written on one side of the sign
+                {
+                    pauseMenuButtons.SetActive(false);
+                    optionsMenu.SetActive(true);
+                    playerMenu.SetActive(true);
+                }
+                cardboardSign.transform.rotation = Quaternion.Euler(0, angle, 0);   // update the rotation of the sign
+                yield return null;
+            }
+        }
+        else
+        {
+            // if sign is at something other than 0
+            float angle = 180;  // make angle now 180 as a starting point
+            while (angle != 0)  // rotate until it is back to 0 rotation
+            {
+                angle -= 5; // decrement angle by 5
+                if (angle == 90)  // change what is active at 90 degrees, makes it appear to only be written on one side of the sign
+                {
+                    pauseMenuButtons.SetActive(true);
+                    optionsMenu.SetActive(false);
+                    playerMenu.SetActive(false);
+                }
+                cardboardSign.transform.rotation = Quaternion.Euler(0, angle, 0);   // update the rotation of the sign
+                yield return null;
+            }
+        }
+        PlayerPrefs.SetFloat("Volume Control", masterSound.volume);
+        PlayerPrefs.Save();
+    }
+
 }

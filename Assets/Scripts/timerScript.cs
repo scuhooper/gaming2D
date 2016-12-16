@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class timerScript : MonoBehaviour
 {
 	public Text timerLabel;
-	float time;
+	public float time;
 
 	void Update()
 	{

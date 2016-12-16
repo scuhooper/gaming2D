@@ -4,21 +4,19 @@
  ********/
  
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
 public class Player : MonoBehaviour
 {
-
 	public float speed = 10.0F;
-	public GameObject hitBox;
 	private Animator animator;
+	public Slider sprintSlider;
 
-	// variables used for combat and damage. These are accessed in some of the drug scripts.
-	// Questions, ask James
-	public float armor;
-	public int damage;
+	public float maxSprintTime;
+	float currentSprintTime;
 
 	public string configFileName = "player1controls.ini";	// default config file name. this will just mimic player1's input on all players
 
@@ -28,7 +26,9 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-		hitBox.SetActive(false);
+		currentSprintTime = maxSprintTime;
+		sprintSlider.maxValue = maxSprintTime;
+		sprintSlider.value = currentSprintTime;
 	}
 
 	private void Awake()
@@ -55,24 +55,23 @@ public class Player : MonoBehaviour
 		if ( moveVector == Vector3.zero )	// no movement happeneing, reset animator bool
 		{
 			animator.SetBool( "isWalking", false );
+			RefillSprint();
 		}
 		else
 		{
-			moveVector.Normalize();	// set the value of the direction moving to 1 unit
-			if ( Input.GetKey( controlMappings[ "sprint" ] ) )	// figure out if we are trying to sprint
-				transform.position += moveVector * speed * 2 * Time.deltaTime;	// double speed
+			moveVector.Normalize(); // set the value of the direction moving to 1 unit
+			if ( currentSprintTime > 0 && Input.GetKey( controlMappings[ "sprint" ] )  ) // figure out if we are trying to sprint
+			{
+				transform.Translate( moveVector * speed * 2 * Time.deltaTime );
+				DrainSprint();
+			}
 			else
-				transform.position += moveVector * speed * Time.deltaTime;	// regular running
+			{
+				transform.Translate( moveVector * speed * Time.deltaTime );
+				if ( !Input.GetKey( controlMappings[ "sprint" ] ) )
+					RefillSprint();
+			}
 			animator.SetBool( "isWalking", true );	// make sure animator is set to moving
-		}
-
-		//Attack
-		if ( Input.GetMouseButtonDown(0))
-		{
-			hitBox.SetActive(true);
-		}
-		else {
-			hitBox.SetActive(false);
 		}
 	}
 
@@ -152,5 +151,27 @@ public class Player : MonoBehaviour
 		fout.Flush();
 		fout.Close();
 		fstream.Close();
+	}
+
+	/// <summary>
+	/// Drain the sprint meter by however much time has elapsed between frames
+	/// </summary>
+	void DrainSprint()
+	{
+		currentSprintTime -= Time.deltaTime;	// decrement the time between frames from the current total
+		if ( currentSprintTime < 0 )	// check for negative values
+			currentSprintTime = 0;
+		sprintSlider.value = currentSprintTime;	// update the slider value
+	}
+
+	/// <summary>
+	/// Refill the sprint meter
+	/// </summary>
+	void RefillSprint()
+	{
+		currentSprintTime += Time.deltaTime * 0.5f;	// add half the amount of time from between frames to the current total
+		if ( currentSprintTime > maxSprintTime )	// check if it exceeds max amount
+			currentSprintTime = maxSprintTime;
+		sprintSlider.value = currentSprintTime;	// update slider
 	}
 }

@@ -525,14 +525,14 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 0
+    Collab: 1
     ErrorHub: 0
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
     UNet: 1
     Unity_Ads: 0
-  cloudProjectId: ce1ea7ff-bb62-451a-8210-12f13bccff94
+  cloudProjectId: 2a8c8569-2390-4de2-b53d-6e4f6eedbdac
   projectName: RPG
-  organizationId: oneforall-studio
+  organizationId: scuhooper
   cloudEnabled: 0

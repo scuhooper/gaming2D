@@ -23,15 +23,11 @@ public class PCP : MonoBehaviour, IDrugAffectable {
 	public void DrugEffectStart( Player p )
 	{
 		p.transform.localScale *= 2;	// increase player size
-		p.armor *= 0.5f;	// give character 50% armor
-		p.damage *= 2;	// player deals double damage
 	}
 
 	public void DrugEffectOver( Player p )
 	{
 		p.transform.localScale *= 0.5f;	// scale player down by half
-		p.armor *= 2;	// character armor is gone.
-		p.damage /= 2;	// character damage is halved
 	}
 
 	public IEnumerator DrugActive( Player p )
