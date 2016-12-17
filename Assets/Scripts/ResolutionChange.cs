@@ -6,44 +6,20 @@ using System.IO;
 using System.Collections.Generic;
 using System;
 
+/// <summary>
+/// Allows the changing of screen resolution while in game through the menus
+/// </summary>
 public class ResolutionChange : MonoBehaviour {
+	
+    public Dropdown ResolutionD; //UI dropdown menu
+    Resolution[] resolutions; //Array for storing possible screen resolutions
 
-    //   public int width;
-    //   public int height;
-    //   public Dropdown resolutionSelection;
-    //   public GameObject menu;
-
-    //   // Use this for initialization
-    //   void Start () {
-
-    //}
-
-
-    //// Update is called once per frame
-    //void Update () {
-
-    //       if (menu.active == true)
-    //       {
-    //           if (resolutionSelection.value == 0)
-    //           {
-    //               setResolution
-    //           }
-    //       }
-
-    //}
-
-    //   public void setResolution(int width, int height)
-    //   {
-    //       Screen.SetResolution(width, height, true);
-    //   }
-
-    public Dropdown ResolutionD;
-    Resolution[] resolutions;
 
     private void Start()
     {
-        resolutions = Screen.resolutions;
+        resolutions = Screen.resolutions; //Gets all possible screen resolutions for monitor
 
+        //Loops through all possible screen resolutions and adds delegates listening for changes to the resolution of the game
         for (int i = 0; i < resolutions.Length; i++)
         {
             ResolutionD.options.Add(new Dropdown.OptionData(ResToString(resolutions[i])));
@@ -54,7 +30,16 @@ public class ResolutionChange : MonoBehaviour {
         }
 
     }
+    private void Update()
+    {
+       // Debug.Log("isChecked is " + isChecked);
+    }
 
+    /// <summary>
+    /// This adds easy to read strings for the resolution you're selecting
+    /// </summary>
+    /// <param name="resolution"></param>
+    /// <returns></returns>
     private string ResToString(Resolution resolution)
     {
         return resolution.width + " X " + resolution.height;

@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Volume Control Script for Options Menus in Game.
+/// </summary>
 public class VolumeControl : MonoBehaviour {
 
-    public Slider volumeSlider;
-    public AudioSource masterSound;
+    public Slider volumeSlider; //SLider for volume
+    public AudioSource masterSound; //Master sound for current scene
 
 	// Use this for initialization
 	void Start () {
-        //print(PlayerPrefs.GetFloat("Volume Control"));
-        masterSound.volume = PlayerPrefs.GetFloat("Volume Control");
+        masterSound.volume = PlayerPrefs.GetFloat("Volume Control"); //Saves preferences to registry file
         volumeSlider.value = masterSound.volume;
     }
 	

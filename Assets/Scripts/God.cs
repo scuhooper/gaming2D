@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class God : MonoBehaviour
 {
+    public GameObject pauseMenu;
 	public Text leftScore;
 	public Text rightScore;
 	public GameObject retryMenu;
 	public Canvas cardboard;
 	public Text winnerText;
+	public float roundDuration;
+	public int maxGoals;
 	timerScript timer;
 	int rightNum;
 	int leftNum;
@@ -32,7 +35,7 @@ public class God : MonoBehaviour
 		if ( bIsGameWon )
 			RetryScreen();
 
-		if ( timer.time > 30 )
+		if ( timer.time > roundDuration )
 		{
 			if ( leftNum > rightNum )
 				winnerText.text = "Player 1 Wins!";
@@ -49,22 +52,20 @@ public class God : MonoBehaviour
 	{
 		leftNum++;
 		leftScore.text = leftNum.ToString();
-		if ( leftNum > 0 )
+		if ( leftNum == maxGoals )
 		{
 			winnerText.text = "Player 1 Wins!";
 			bIsGameWon = true;
-			// RetryScreen();
 		}
 	}
 	public void AddScoreRight()
 	{
 		rightNum++;
 		rightScore.text = rightNum.ToString();
-		if ( rightNum > 0 )
+		if ( rightNum == maxGoals )
 		{
 			winnerText.text = "Player 2 Wins!";
 			bIsGameWon = true;
-			// RetryScreen();
 		}
 	}
 
@@ -77,6 +78,7 @@ public class God : MonoBehaviour
 		}
 		cardboard.enabled = true;
 		retryMenu.SetActive( true );
+        pauseMenu.SetActive(false);
 	}
 
 	public void OnRetryButtonClick()
