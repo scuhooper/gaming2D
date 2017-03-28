@@ -1,6 +1,21 @@
-# gaming2D
-Our game for 360
+# Prominent Features
+## Random Powerup Spawns
 
-//this is the first commit
+<br />
+<hr>
 
-//Just Say No
+## Separate Customizable Character Controls
+
+<br />
+<hr>
+
+## Pause Menu
+### Set Sound Volume
+
+### Choose Resolution
+
+<br />
+<hr>
+
+# Code Repository
+## [Hobo Hotbox Soccer Repo](https://github.com/scuhooper/gaming2D)
