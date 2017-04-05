@@ -1,3 +1,9 @@
+# Video Highlight
+<iframe width="640" height="360" src="https://www.youtube.com/embed/-WhgPOvFbg4" frameborder="0" allowfullscreen></iframe> 
+
+<br />
+<hr>
+
 # Prominent Features
 ## Random Power-up Spawns
 The game has several power-ups, in our game they are flavored after various drugs in a satirical fashion, which spawn and affect the gameplay. The spawns are located at four possible locations, and each location spawns a random power-up from a list on a varied spawn rate. Nothing will replace a power-up until it is collected. Once the power-up is collected, the spawner picks a random time amount to wait until it spawns another power-up chosen at random from the list.
